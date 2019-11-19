@@ -3,7 +3,7 @@
 
 
 // --- STRUCT ---
-typedef Vector vector
+typedef Vector vector;
 struct Vector
 {
     int x;
