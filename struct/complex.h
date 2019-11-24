@@ -3,17 +3,15 @@
 
 // --- STRUCT ---
 typedef struct Complex Complex;
-struct Complex
-{
+struct Complex {
     int real;
     int imaginary;
 };
 
 // --- PROTO ---
-void noPointerComplex(struct Complex *);
-Complex pointerComplex();
+void declareComplex(struct Complex *);
+Complex createComplex();
 
-void modeComplex();
 
 
 #endif // COMPLEX
