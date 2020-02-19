@@ -88,6 +88,39 @@ timeDateCheck dataIn (timeDateCheck data)
     while (data.lastDayCheck<=0 || data.lastDayCheck>31);
 
 
+    // LAST MONTH CHECK
+    printf("\n\n\n-------------------------------------------\n");
+    printf(" Month of the last check ?\n");
+    printf(" Format : MM  \n");
+
+    do
+    {
+        scanf("%d", &data.lastMonthCheck);
+
+        if (data.lastMonthCheck > 12)
+        {
+            printf("Please enter a number smaller than 12\n");
+        }
+
+        else if (data.lastMonthCheck < 0)
+        {
+            printf(" Please enter a number higher than 0\n");
+        }
+
+        else if (data.lastMonthCheck>0 && data.lastMonthCheck<=12)
+        {
+            printf("Ok !");
+        }
+
+        else
+        {
+            printf("\nERROR IN LAST MONTH CHECK\n");
+        }
+
+    }
+    while (data.lastMonthCheck<=0 || data.lastMonthCheck>12);
+
+
     //CURRENT TIME CHECK
     printf("\n\n\n-------------------------------------------\n");
     printf(" Current time ?\n");
@@ -153,5 +186,49 @@ timeDateCheck dataIn (timeDateCheck data)
     }
     while (data.lastDayCheck<=0 || data.lastDayCheck>31);
 
+
+    // CURRENT MONTH CHECK
+    printf("\n\n\n-------------------------------------------\n");
+    printf(" Current ?\n");
+    printf(" Format : MM  \n");
+
+    do
+    {
+        scanf("%d", &data.currentMonth);
+
+        if (data.currentMonth > 12)
+        {
+            printf("Please enter a number smaller than 12\n");
+        }
+
+        else if (data.currentMonth < 0)
+        {
+            printf(" Please enter a number higher than 0\n");
+        }
+
+        else if (data.currentMonth>0 && data.currentMonth<=12)
+        {
+            printf("Ok !");
+        }
+
+        else
+        {
+            printf("\nERROR IN LAST MONTH CHECK\n");
+        }
+
+    }
+    while (data.currentMonth<=0 || data.currentMonth>12);
+
+
     return data;
+}
+
+void dispData(timeDateCheck data)
+{
+    printf("\n\n\n-------------------------------------------\n");
+    printf("LAST CHECK\n");
+    printf("the %d / %d / 2020 - at %d h\n\n", data.lastDayCheck, data.lastMonthCheck, data.lastTimeCheck);
+
+    printf("TODAY\n");
+    printf("the %d / %d / 2020 - at %d h\n\n", data.currentDay, data.currentMonth, data.currentTime);
 }
