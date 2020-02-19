@@ -16,6 +16,7 @@ typedef struct timeDateCheck
 
 // --- PROTO ---
 void dispTitle();
+void dispData(timeDateCheck data);
 timeDateCheck dataIn(timeDateCheck data);
 
 
